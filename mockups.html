@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Mockups - Spikely Volley</title>
+	<meta name="description" content="Propuesta visual de la plataforma Spikely Volley." />
+	<link rel="stylesheet" href="spikely.css" />
+	<style>
+		:root { --ink:#111827; --soft-ink:#667085; --line:#e8e8e8; --navy:#17233d; --green:#21a179; }
+		body { background:#fcfcfc; }
+		.mockups-page { overflow-x:hidden; }
+		.mockups-hero { padding:5.5rem 0 3.5rem; position:relative; }
+		.mockups-hero::after { content:""; position:absolute; width:24rem; height:24rem; border-radius:50%; background:var(--orange-50); top:0; right:-10rem; z-index:-1; }
+		.mockups-hero h1 { max-width:48rem; margin-bottom:1rem; }
+		.mockups-hero .desc { max-width:44rem; }
+		.mockups-meta { display:flex; align-items:center; gap:.75rem; margin-top:1.75rem; color:var(--muted); font-size:.9rem; }
+		.status-dot { width:.65rem; height:.65rem; background:var(--green); border-radius:50%; box-shadow:0 0 0 5px #dff5ed; }
+		.screen-nav { display:flex; gap:.75rem; border-bottom:1px solid var(--border); overflow-x:auto; }
+		.screen-nav a { flex:0 0 auto; padding:.85rem 1rem; color:var(--muted); font-size:.9rem; font-weight:700; border-bottom:2px solid transparent; }
+		.screen-nav a.active,.screen-nav a:hover { color:var(--orange-700); border-color:var(--orange); }
+		.mockup-section { padding:3rem 0 6rem; }
+		.mockup-label { display:flex; justify-content:space-between; align-items:end; gap:1rem; margin-bottom:1.25rem; }
+		.mockup-label h2 { margin:0; font-size:1.55rem; }
+		.mockup-label p { color:var(--muted); font-size:.88rem; }
+		.browser { background:#fff; border:1px solid #dedede; border-radius:1rem; box-shadow:0 24px 50px rgba(17,24,39,.1); overflow:hidden; }
+		.browser-bar { height:2.7rem; display:flex; align-items:center; gap:.45rem; padding:0 1rem; background:#f7f7f8; border-bottom:1px solid var(--line); }
+		.browser-bar i { display:block; width:.6rem; height:.6rem; border-radius:50%; background:#d2d4d8; }
+		.browser-bar i:first-child { background:#f38b79; } .browser-bar i:nth-child(2) { background:#f2c45d; }
+		.browser-url { margin-left:.75rem; color:#9aa0aa; font-size:.7rem; }
+		.app-shell { display:grid; grid-template-columns:12.5rem 1fr; min-height:31rem; }
+		.app-sidebar { background:var(--navy); color:#fff; padding:1.25rem 1rem; }
+		.app-logo { display:flex; gap:.5rem; align-items:center; font-weight:800; font-size:1.1rem; margin-bottom:2rem; }
+		.app-logo b { width:.7rem; height:.7rem; display:block; border-radius:50%; background:var(--orange); }
+		.side-caption { text-transform:uppercase; letter-spacing:.11em; color:#92a0bd; font-size:.58rem; margin:1.2rem .7rem .6rem; }
+		.side-link { display:flex; align-items:center; gap:.65rem; padding:.65rem .7rem; color:#c5cde0; border-radius:.45rem; font-size:.75rem; margin-bottom:.25rem; }
+		.side-link.active { background:var(--orange); color:#fff; }
+		.side-icon { width:1rem; text-align:center; font-size:.85rem; }
+		.app-content { background:#f6f7f9; padding:1.7rem; }
+		.app-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; }
+		.app-top h3 { font-size:1.25rem; margin:0; } .app-top p { font-size:.7rem; color:var(--soft-ink); margin-top:.2rem; }
+		.avatar { width:2rem; height:2rem; display:grid; place-items:center; border-radius:50%; background:var(--orange-100); color:var(--orange-700); font-size:.7rem; font-weight:800; }
+		.mini-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:.8rem; }
+		.stat { background:#fff; border:1px solid #ebedf0; padding:1rem; border-radius:.65rem; }
+		.stat small { color:var(--soft-ink); font-size:.65rem; } .stat strong { display:block; color:var(--ink); font-size:1.35rem; margin:.35rem 0; } .trend { color:var(--green); font-size:.65rem; font-weight:700; }
+		.dashboard-lower { display:grid; grid-template-columns:1.2fr .8fr; gap:.8rem; margin-top:.8rem; }
+		.inner-panel { background:#fff; border:1px solid #ebedf0; padding:1rem; border-radius:.65rem; }
+		.inner-panel h4 { font-size:.78rem; margin-bottom:.8rem; }
+		.match { display:flex; justify-content:space-between; align-items:center; border-top:1px solid #f0f1f3; padding:.65rem 0; font-size:.68rem; }
+		.match:first-of-type { border-top:0; } .match b { font-size:.8rem; } .pill { padding:.25rem .45rem; border-radius:99px; color:#167153; background:#e5f6ef; font-size:.58rem; font-weight:700; }
+		.bars { display:flex; gap:.45rem; align-items:end; height:6rem; padding-top:.5rem; }
+		.bar { flex:1; background:var(--orange-100); border-radius:.2rem .2rem 0 0; } .bar:nth-child(1){height:42%}.bar:nth-child(2){height:66%}.bar:nth-child(3){height:51%}.bar:nth-child(4){height:86%;background:var(--orange)}.bar:nth-child(5){height:74%}
+		.tournament { background:#fff; border:1px solid var(--line); border-radius:1rem; padding:1.5rem; box-shadow:0 12px 30px rgba(17,24,39,.06); }
+		.tournament-head { display:flex; justify-content:space-between; gap:1rem; align-items:start; border-bottom:1px solid var(--line); padding-bottom:1.2rem; }
+		.tournament-head h3 { margin:0; font-size:1.1rem; } .tournament-head p { font-size:.78rem; color:var(--muted); margin-top:.35rem; }
+		.live { color:#bc3c24; background:#fff0ec; padding:.3rem .55rem; border-radius:99px; font-size:.62rem; font-weight:800; white-space:nowrap; }
+		.bracket { display:grid; grid-template-columns:repeat(3,1fr); gap:.8rem; align-items:center; padding-top:1.25rem; }
+		.round { display:grid; gap:1.6rem; } .round-name { color:var(--muted); text-transform:uppercase; letter-spacing:.08em; font-size:.58rem; margin-bottom:-.9rem; }
+		.game { border:1px solid #e5e7eb; border-left:3px solid var(--orange); border-radius:.45rem; overflow:hidden; font-size:.68rem; background:#fff; }
+		.game span { display:flex; justify-content:space-between; padding:.42rem .5rem; } .game span+span { border-top:1px solid #edf0f2; } .game b { color:var(--orange-700); }
+		.bracket .round:nth-child(2) { margin-top:2.2rem; } .bracket .round:nth-child(3) { margin-top:4.4rem; }
+		.showcase-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:1.5rem; align-items:start; }
+		.phone-wrap { display:flex; justify-content:center; } .phone { width:min(100%,17rem); border:.55rem solid #1b2438; border-radius:2rem; background:#f6f7f9; overflow:hidden; box-shadow:0 20px 35px rgba(17,24,39,.17); }
+		.phone-notch { width:5rem; height:.95rem; background:#1b2438; border-radius:0 0 .75rem .75rem; margin:0 auto; } .phone-content { padding:1rem .8rem 1.1rem; }
+		.phone-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; } .phone-top strong { font-size:.9rem; } .phone-top span { color:var(--orange); font-size:.7rem; }
+		.welcome { color:var(--muted); font-size:.65rem; margin-bottom:.8rem; }
+		.next-card { color:#fff; background:var(--navy); border-radius:.8rem; padding:1rem; margin-bottom:.8rem; } .next-card small { color:#aebbd4; font-size:.58rem; } .next-card h4 { font-size:.85rem; margin:.4rem 0 .8rem; } .next-card footer { border:0; padding:0; display:flex; justify-content:space-between; font-size:.62rem; color:#cdd5e5; }
+		.phone-section { font-size:.72rem; font-weight:800; margin:1rem 0 .6rem; } .team-row { display:flex; align-items:center; gap:.6rem; background:#fff; border:1px solid #eaebed; border-radius:.55rem; padding:.55rem; margin-bottom:.45rem; font-size:.64rem; }
+		.team-ball { width:1.4rem; height:1.4rem; border-radius:.4rem; background:var(--orange-100); display:grid; place-items:center; } .team-row strong { display:block; font-size:.68rem; } .team-row small { color:var(--muted); }
+		.cta-panel { margin-top:1.5rem; padding:1.5rem; display:flex; justify-content:space-between; align-items:center; gap:1rem; background:var(--orange-50); border:1px solid var(--orange-100); border-radius:1rem; }
+		.cta-panel h3 { margin:0; font-size:1.05rem; } .cta-panel p { color:var(--muted); font-size:.85rem; margin-top:.25rem; } .btn-orange { display:inline-flex; align-items:center; gap:.5rem; padding:.7rem 1rem; background:var(--orange); color:#fff; border-radius:.55rem; font-size:.8rem; font-weight:800; white-space:nowrap; } .btn-orange:hover { background:var(--orange-700); }
+		.screen-map { padding:2.25rem 0 1rem; }
+		.screen-map-head { display:flex; justify-content:space-between; align-items:end; gap:1rem; margin-bottom:1.25rem; }
+		.screen-map-head h2 { margin:0; font-size:1.55rem; }
+		.screen-map-head p { max-width:28rem; color:var(--muted); font-size:.88rem; text-align:right; }
+		.screen-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:.9rem; }
+		.screen-card { min-height:9rem; display:flex; flex-direction:column; justify-content:space-between; padding:1rem; border:1px solid var(--border); border-radius:.75rem; background:#fff; box-shadow:0 8px 20px rgba(17,24,39,.04); }
+		.screen-card:hover { border-color:var(--orange); transform:translateY(-2px); transition:transform .15s ease,border-color .15s ease; }
+		.screen-thumb { height:4rem; display:flex; align-items:end; gap:.25rem; padding:.55rem; border-radius:.5rem; background:var(--navy); overflow:hidden; }
+		.screen-thumb span { display:block; height:70%; flex:1; border-radius:.15rem .15rem 0 0; background:#f4f6fa; opacity:.95; }
+		.screen-thumb span:nth-child(2) { height:88%; background:var(--orange); } .screen-thumb span:nth-child(3) { height:52%; background:#a9b6cc; }
+		.screen-card:nth-child(2) .screen-thumb { background:linear-gradient(135deg,#102c50 50%,#f2f5f9 50%); }
+		.screen-card:nth-child(3) .screen-thumb { background:#f2f5f9; border:1px solid #e7eaf0; } .screen-card:nth-child(3) .screen-thumb span { background:#d8e0ed; } .screen-card:nth-child(3) .screen-thumb span:nth-child(2) { background:#2e80ed; }
+		.screen-card:nth-child(4) .screen-thumb { background:#f2f5f9; border:1px solid #e7eaf0; } .screen-card:nth-child(4) .screen-thumb span { height:32%; background:#173456; }
+		.screen-card:nth-child(5) .screen-thumb span:nth-child(1),.screen-card:nth-child(5) .screen-thumb span:nth-child(3) { height:88%; } .screen-card:nth-child(6) .screen-thumb span:nth-child(1) { height:44%; } .screen-card:nth-child(6) .screen-thumb span:nth-child(2) { height:98%; }
+		.screen-card:nth-child(7) .screen-thumb { width:58%; } .screen-card:nth-child(7) .screen-thumb span { height:58%; } .screen-card:nth-child(8) .screen-thumb { background:#fff; border:1px solid #e7eaf0; } .screen-card:nth-child(8) .screen-thumb span { height:.8rem; border-radius:50%; background:var(--orange); }
+		.screen-card strong { color:var(--ink); font-size:.8rem; } .screen-card small { color:var(--muted); font-size:.68rem; margin-top:.2rem; }
+		@media (max-width:800px){.app-shell{grid-template-columns:1fr}.app-sidebar{display:none}.showcase-grid{grid-template-columns:1fr}.mockups-hero{padding-top:3.5rem}}
+		@media (max-width:800px){.screen-grid{grid-template-columns:repeat(2,1fr)}.screen-map-head{align-items:flex-start;flex-direction:column}.screen-map-head p{text-align:left}}
+		@media (max-width:560px){.mockup-label,.cta-panel{align-items:flex-start;flex-direction:column}.mini-grid,.dashboard-lower{grid-template-columns:1fr}.app-content{padding:1rem}.browser{border-radius:.7rem}.bracket{gap:.4rem}.tournament{padding:1rem}.screen-grid{grid-template-columns:1fr 1fr}.screen-card{min-height:8rem}}
+	</style>
+</head>
+<body class="mockups-page">
+	<header class="nav"><div class="nav-inner"><a href="spikely.html#top" class="brand"><img src="imagenes/spikely-logo.png" alt="Logo Spikely" class="logo"></a><nav class="menu"><a href="spikely.html#problema">Problema</a><a href="spikely.html#objetivos">Objetivos</a><a href="spikely.html#resultados">Resultados</a><a href="mockups.html" style="color:var(--fg);font-weight:700;">Mockups</a><a href="Diagramas.html">Diagramas</a></nav></div></header>
+	<main>
+		<section class="mockups-hero"><div class="container"><span class="badge">Propuesta de interfaz · Spikely Volley</span><h1>Una experiencia clara para cada partido.</h1><p class="lead">Los mockups traducen la idea de Spikely en una plataforma deportiva ordenada, rápida y fácil de consultar.</p><p class="desc">Desde el panel de organización hasta el seguimiento de un equipo desde el celular, cada pantalla concentra lo importante sin perder el ritmo del torneo.</p><div class="mockups-meta"><span class="status-dot"></span> Diseño base listo para prototipar · Responsive</div></div></section>
+		<section class="container"><nav class="screen-nav" aria-label="Secciones del prototipo"><a class="active" href="#dashboard">01 · Dashboard</a><a href="#torneo">02 · Torneo</a><a href="#movil">03 · Vista móvil</a></nav></section>
+		<section class="screen-map"><div class="container"><div class="screen-map-head"><div><p class="eyebrow">Mapa de pantallas</p><h2>Un sistema completo, en un solo vistazo</h2></div><p>La propuesta se organiza por los flujos principales del usuario y mantiene el azul marino, el naranja de acción y fondos claros.</p></div><div class="screen-grid"><a class="screen-card" href="#movil"><div class="screen-thumb"><span></span><span></span><span></span></div><div><strong>01 · Iniciar sesión</strong><small>Acceso y registro</small></div></a><a class="screen-card" href="#dashboard"><div class="screen-thumb"><span></span><span></span><span></span></div><div><strong>02 · Inicio</strong><small>Resumen del torneo</small></div></a><a class="screen-card" href="#torneo"><div class="screen-thumb"><span></span><span></span><span></span></div><div><strong>03 · Torneos</strong><small>Listado y estados</small></div></a><a class="screen-card" href="#torneo"><div class="screen-thumb"><span></span><span></span><span></span></div><div><strong>04 · Mis equipos</strong><small>Plantillas y jugadores</small></div></a><a class="screen-card" href="#torneo"><div class="screen-thumb"><span></span><span></span><span></span></div><div><strong>05 · Detalle</strong><small>Partido y alineaciones</small></div></a><a class="screen-card" href="#dashboard"><div class="screen-thumb"><span></span><span></span><span></span></div><div><strong>06 · Estadísticas</strong><small>Datos y rendimiento</small></div></a><a class="screen-card" href="#movil"><div class="screen-thumb"><span></span><span></span><span></span></div><div><strong>07 · Vista móvil</strong><small>Consulta en movimiento</small></div></a><a class="screen-card" href="#dashboard"><div class="screen-thumb"><span></span><span></span><span></span></div><div><strong>08 · Identidad visual</strong><small>Colores y componentes</small></div></a></div></div></section>
+		<section class="mockup-section" id="dashboard"><div class="container"><div class="mockup-label"><div><p class="eyebrow">Vista del organizador</p><h2>Panel general</h2></div><p>Resumen de actividad y próximos partidos</p></div><div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">app.spikely.co / dashboard</span></div><div class="app-shell"><aside class="app-sidebar"><div class="app-logo"><b></b> spikely</div><p class="side-caption">Principal</p><div class="side-link active"><span class="side-icon">▦</span> Dashboard</div><div class="side-link"><span class="side-icon">◈</span> Torneos</div><div class="side-link"><span class="side-icon">♟</span> Equipos</div><p class="side-caption">Gestión</p><div class="side-link"><span class="side-icon">◷</span> Calendario</div><div class="side-link"><span class="side-icon">▤</span> Resultados</div><div class="side-link"><span class="side-icon">⚙</span> Ajustes</div></aside><div class="app-content"><div class="app-top"><div><h3>Buenos días, Carlos</h3><p>Aquí tienes el resumen de tus torneos.</p></div><div class="avatar">CG</div></div><div class="mini-grid"><div class="stat"><small>Torneos activos</small><strong>04</strong><span class="trend">↑ 12% este mes</span></div><div class="stat"><small>Equipos inscritos</small><strong>32</strong><span class="trend">↑ 08% este mes</span></div><div class="stat"><small>Partidos jugados</small><strong>18</strong><span class="trend">↑ 24% este mes</span></div></div><div class="dashboard-lower"><div class="inner-panel"><h4>Próximos partidos</h4><div class="match"><span><b>Halcones</b> vs Titanes<br><small>Hoy · 18:00</small></span><span class="pill">Cancha 1</span></div><div class="match"><span><b>Spikers</b> vs Fénix<br><small>Mañana · 16:30</small></span><span class="pill">Cancha 2</span></div><div class="match"><span><b>Panteras</b> vs Lobos<br><small>15 Mayo · 19:00</small></span><span class="pill">Cancha 1</span></div></div><div class="inner-panel"><h4>Partidos por semana</h4><div class="bars"><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span></div></div></div></div></div></div></div></section>
+		<section class="mockup-section" id="torneo" style="background:#f8f8f8;border-top:1px solid var(--border);border-bottom:1px solid var(--border);"><div class="container"><div class="mockup-label"><div><p class="eyebrow">Seguimiento en tiempo real</p><h2>Detalle del torneo</h2></div><p>Fixture, equipos y avance de cada ronda</p></div><div class="tournament"><div class="tournament-head"><div><h3>Copa Spikely · Categoría Mixta</h3><p>Fase eliminatoria · 16 equipos inscritos</p></div><span class="live">● EN VIVO</span></div><div class="bracket"><div class="round"><small class="round-name">Cuartos</small><div class="game"><span>Halcones <b>2</b></span><span>Tigres <b>0</b></span></div><div class="game"><span>Spikers <b>2</b></span><span>Fénix <b>1</b></span></div></div><div class="round"><small class="round-name">Semifinal</small><div class="game"><span>Halcones <b>2</b></span><span>Spikers <b>1</b></span></div><div class="game"><span>Panteras <b>1</b></span><span>Lobos <b>2</b></span></div></div><div class="round"><small class="round-name">Final</small><div class="game"><span>Halcones <b>?</b></span><span>Lobos <b>?</b></span></div></div></div></div></div></section>
+		<section class="mockup-section" id="movil"><div class="container"><div class="mockup-label"><div><p class="eyebrow">Acceso para participantes</p><h2>La información va contigo</h2></div><p>Consulta rápida desde cualquier dispositivo</p></div><div class="showcase-grid"><div class="card" style="padding:2rem;"><h3><span class="icon">◉</span> Una vista pensada para decidir rápido</h3><p>El jugador puede consultar su próximo partido, revisar el estado de su equipo y seguir la tabla sin navegar entre chats o publicaciones perdidas.</p><div class="chips"><span class="chip">Próximo partido</span><span class="chip">Resultados</span><span class="chip">Tabla de posiciones</span></div></div><div class="phone-wrap"><div class="phone"><div class="phone-notch"></div><div class="phone-content"><div class="phone-top"><strong>Hola, Valentina</strong><span>☰</span></div><p class="welcome">Este es el resumen de tu torneo.</p><div class="next-card"><small>PRÓXIMO PARTIDO · HOY</small><h4>Halcones vs. Titanes</h4><footer><span>18:00 · Cancha 1</span><span>Fase 2</span></footer></div><p class="phone-section">Mi equipo</p><div class="team-row"><span class="team-ball">●</span><span><strong>Halcones Vóley</strong><small> 2.º lugar · 12 pts</small></span><b>›</b></div><p class="phone-section">Último resultado</p><div class="team-row"><span class="team-ball">✓</span><span><strong>Halcones 2 - 0 Fénix</strong><small>Finalizado ayer</small></span><b style="color:var(--green);">+3</b></div></div></div></div></div><div class="cta-panel"><div><h3>De la idea a un producto usable</h3><p>Esta propuesta visual sirve como base para validar flujos antes del desarrollo.</p></div><a class="btn-orange" href="spikely.html#resultados">Ver entregables <span>→</span></a></div></div></section>
+	</main>
+	<footer><div class="container"><p class="brand-line">Spikely Volley</p><p>Plataforma web para la gestión de torneos de voleibol amateur.</p></div></footer>
+</body>
+</html>
