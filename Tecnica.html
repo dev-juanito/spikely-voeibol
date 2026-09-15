@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Técnica - Spikely</title>
+  <meta name="description" content="Sección técnica - Spikely Volley" />
+  <link rel="stylesheet" href="spikely.css" />
+  <style>
+    /* Ajustes específicos solo para esta página */
+    .tecnica-page {
+      padding: 4.5rem 0 6rem;
+    }
+
+    .tecnica-header {
+      text-align: center;
+      margin-bottom: 2.25rem;
+    }
+
+    .tecnica-header h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      margin-bottom: .75rem;
+    }
+
+    .tecnica-header p {
+      color: var(--muted);
+      max-width: 52rem;
+      margin: 0 auto;
+    }
+
+    .tecnica-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.75rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    }
+
+    .tecnica-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.25rem;
+    }
+
+    .tecnica-actions .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      padding: .85rem 1.25rem;
+      border-radius: .75rem;
+      border: 1px solid var(--orange);
+      background: var(--orange-100);
+      color: var(--orange-700);
+      font-weight: 800;
+      transition: transform .08s ease, background .15s ease;
+      user-select: none;
+    }
+
+    .tecnica-actions .btn:active { transform: scale(0.99); }
+    .tecnica-actions .btn:hover { background: var(--orange-50); }
+
+    .encuesta-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .encuesta-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .encuesta-item {
+      border: 1px dashed rgba(234,88,12,0.35);
+      border-radius: .9rem;
+      padding: 1rem;
+      background: rgba(255,247,237,0.6);
+    }
+
+    .encuesta-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: .75rem;
+      border: 1px solid var(--border);
+      background: #fff;
+    }
+
+    .encuesta-item .label {
+      margin-top: .75rem;
+      font-size: .9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body id="top">
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="spikely.html" class="brand">
+        <img src="imagenes/spikely-logo.png" alt="Logo Spikely" class="logo">
+      </a>
+      <nav class="menu">
+        <a href="spikely.html">Inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="tecnica-page">
+    <div class="container">
+      <div class="tecnica-card">
+        <div class="tecnica-header">
+          <p class="eyebrow" style="margin-bottom:.75rem;">Tecnica de recoleccion: Encuesta</p>
+          <h1 id="resultados">Resultados de encuesta</h1>
+        <div class="encuesta-grid" aria-label="Galería de resultados de encuesta">
+          <figure class="encuesta-item">
+            <img src="imagenes/Encuesta 1.png" alt="Resultado encuesta 1" />
+            <figcaption class="label">Resultado encuesta 1</figcaption>
+          </figure>
+
+          <figure class="encuesta-item">
+            <img src="imagenes/encuesta 2.png" alt="Resultado encuesta 2" />
+            <figcaption class="label">Resultado encuesta 2</figcaption>
+          </figure>
+
+          <figure class="encuesta-item">
+            <img src="imagenes/encuesta 3.png" alt="Resultado encuesta 3" />
+            <figcaption class="label">Resultado encuesta 3</figcaption>
+          </figure>
+
+          <figure class="encuesta-item">
+            <img src="imagenes/encuesta 4.png" alt="Resultado encuesta 4" />
+            <figcaption class="label">Resultado encuesta 4</figcaption>
+          </figure>
+          <figure class="encuesta-item">
+            <img src="imagenes/encuesta 5.png" alt="Resultado encuesta 5" />
+            <figcaption class="label">Resultado encuesta 5</figcaption>
+          </figure>
+          <figure class="encuesta-item">
+            <img src="imagenes/encuesta 6.png" alt="Resultado encuesta 6" />
+            <figcaption class="label">Resultado encuesta 6</figcaption>
+          </figure>
+          <figure class="encuesta-item">
+            <img src="imagenes/encuesta 7.png" alt="Resultado encuesta 7" />
+            <figcaption class="label">Resultado encuesta 7</figcaption>
+          </figure>
+          <figure class="encuesta-item">
+            <img src="imagenes/encuesta 8.png" alt="Resultado encuesta 8" />
+            <figcaption class="label">Resultado encuesta 8</figcaption>
+          </figure>
+          <figure class="encuesta-item">
+            <img src="imagenes/encuesta 9.png" alt="Resultado encuesta 9" />
+            <figcaption class="label">Resultado encuesta 9</figcaption>
+          </figure>
+          <figure class="encuesta-item">
+            <img src="imagenes/encuesta 10.png" alt="Resultado encuesta 10" />
+            <figcaption class="label">Resultado encuesta 10</figcaption>
+          </figure>
+          <figure class="encuesta-item">
+            <img src="imagenes/encuesta 11.png" alt="Resultado encuesta 11" />
+            <figcaption class="label">Resultado encuesta 11</figcaption>
+          </figure>
+          <figure class="encuesta-item">
+            <img src="imagenes/encuesta 12.png" alt="Resultado encuesta 12" />
+            <figcaption class="label">Resultado encuesta 12</figcaption>
+          </figure>
+          <figure class="encuesta-item">
+            <img src="imagenes/encuesta 13.png" alt="Resultado encuesta 13" />
+            <figcaption class="label">Resultado encuesta 13</figcaption>
+          </figure>
+          <figure class="encuesta-item">
+            <img src="imagenes/encuesta 14.png" alt="Resultado encuesta 14" />
+            <figcaption class="label">Resultado encuesta 14</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
+
