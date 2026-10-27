@@ -1,15 +1,3 @@
--- =====================================================================
--- SPIKELY VOLLEY - 02: Tablas (modelo normalizado hasta 3FN)
---
--- Cambios de normalización respecto a la versión anterior:
---   * resultado ya no tiene set1..set5 (grupo repetido, rompía la 1FN):
---     ahora cada set es una fila de la tabla set_partido.
---   * resultado.ganador se eliminó (se deduce de los sets): ver la vista
---     v_resultado_partido en 04_vistas_y_triggers.sql.
---   * tabla_posiciones se eliminó como tabla (eran datos derivados):
---     ahora es la vista v_tabla_posiciones, siempre consistente.
--- =====================================================================
-
 USE spikely_volley;
 
 
